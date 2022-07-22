@@ -1,8 +1,8 @@
-# Kriteria Bookshelf Apps
-
-## PROJECT OVERVIEW
+# PROJECT OVERVIEW
 
 ![Screenshot Project](overview.png)
+
+# Kriteria Bookshelf Apps
 
 Buatlah aplikasi web yang dapat memasukan data buku ke dalam rak, memindahkan data buku antar rak, dan menghapus data buku dari rak.
 
