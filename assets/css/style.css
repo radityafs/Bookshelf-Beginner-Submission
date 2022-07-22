@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: aliceblue !important;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+.content{
+    height: 100%;
+}
+
+.left{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.btn-end{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addBook{
+    margin-right: 20px;
+    border: 0;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(90deg, rgba(244, 89, 112, .7), rgba(244, 91, 167, .7));
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-modal{
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(244, 89, 112, .7), rgba(244, 91, 167, .7));
+    color: white !important;
+
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden !important; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    position: absolute;
+    top: 10%;
+    width: 80% !important; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.header{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, rgba(244, 89, 112, .7), rgba(244, 91, 167, .7));
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.biodata{
+    z-index: 1;
+    width: 80%;
+    margin-top: 100px;
+    height: 250px;
+    border-radius: 20px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.biodata .photo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.biodata .icons{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.biodata .icons img{
+    width: 40px;
+    height: 40px;
+}
+
+.biodata h1{
+    font-size: 24px;
+    color: rgba(244, 89, 112, .7);
+    margin-bottom: 0;
+}
+
+.search{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input{
+    width: 65%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.search img{
+    width: 20px;
+    height: 20px;
+}
+
+.search .btn-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    width: 13%;
+    background: linear-gradient(90deg, rgba(244, 89, 112, .7), rgba(244, 91, 167, .7));
+    height: 50px;
+    border-radius: 20px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    height: 200px;
+    background-color: #FFF;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.welcome .welcome-text{
+    margin-left: 15px;
+}
+
+.books-content{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 80%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.content .books-content ul{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.content .books-content ul li{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.content .books-content ul li button{
+    border: 0;
+    width: 100%;
+    background: #FFF;
+    color: #757575;
+    font-weight: bold;
+}
+
+.content .books-content ul li button.active{
+    color: black;
+}
+
+
+.books-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.books-list .book-item{
+    position: relative;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    margin-top: 25px;
+    margin-top: 25px;
+    border-bottom: 1px solid #F5F5F5;
+    padding-bottom: 25px;
+}
+
+.books-list .book-item p{
+    margin: 0;
+}
+
+.book-item .book-photo img{
+    width: 100px;
+    height: 100px;
+}
+
+.no-book{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-read, .btn-delete{
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+}
+
+.btn-action{
+    width: 75px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+}
+
+.description{
+    font-size: 14px;
+    margin-left: 10px;
+    width: 175px;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .modal-content {
+        width: 30% !important;
+        left: auto;
+        top:-10%;
+    }
+
+    .content{
+        flex-direction: row;
+    }
+
+
+    .left{
+        width: 30%;
+        height: 80%;
+    }
+
+    .left .biodata{
+        margin-top: -10px;
+        height: 400px;
+    }
+
+    .right{
+        z-index: 1;
+        width: 70%;
+        height: 80%;
+        margin-bottom: 25px;
+    }
+
+    .welcome,.search,.books-content{
+        margin-top: 25px;
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    .welcome{
+        margin-top: 0;
+        height: 200px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-end{
+        width: auto;
+    }
+
+    .search input{
+        width: 85%;
+    }
+
+    .books-list{
+        height: 315px;
+        overflow-y: auto;
+    }
+
+    .description{
+        max-width: 100%;
+        overflow: hidden;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 25px;
+    }
+
+    .no-book{
+        height: 315px;
+    }
+
+
+}
