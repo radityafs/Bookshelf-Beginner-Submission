@@ -14,9 +14,9 @@ const STORAGE_KEY = 'BOOKSHELF_APP';
 const addBook = (e) => {
   e.preventDefault();
 
-  const bookTitle = document.getElementById('book_input').value;
-  const bookAuthor = document.getElementById('author_input').value;
-  const bookYear = document.getElementById('year_input').value;
+  let bookTitle = document.getElementById('book_input').value;
+  let bookAuthor = document.getElementById('author_input').value;
+  let bookYear = document.getElementById('year_input').value;
 
   if (bookTitle !== '' && bookAuthor !== '' && bookYear !== '') {
     const book = {
@@ -28,15 +28,16 @@ const addBook = (e) => {
     };
 
     if (isStorageExist()) {
-      const books = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      const books = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
       books.push(book);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(books));
 
       modal.style.display = 'none';
 
-      bookTitle.value = '';
-      bookAuthor.value = '';
-      bookYear.value = '';
+      document.getElementById('book_input').value = '';
+      document.getElementById('author_input').value = '';
+      document.getElementById('year_input').value = new Date().getFullYear();
 
       showToast('Buku berhasil ditambahkan');
 
@@ -78,7 +79,6 @@ const editBook = (e) => {
   const booksId = parentElement.getAttribute('key');
 
   const books = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  console.log(booksId);
   const newBooks = books.map((book) => {
     if (book.id === parseInt(booksId)) {
       book.isComplete = !book.isComplete;
@@ -113,7 +113,7 @@ window.addEventListener(RENDER_EVENT, () => {
   unreadBooks.innerHTML = '';
   readBooks.innerHTML = '';
 
-  books.map((book) => {
+  books?.map((book) => {
     if (book.isComplete && filterBooks(book, searchValue)) {
       readBooks.innerHTML += `
             <div class="book-item" key=${book.id}>
